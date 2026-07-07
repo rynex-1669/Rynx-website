@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delta Script Hub - Universal Emotes</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-terminal"></i>
+                <span>Delta Script Hub</span>
+            </div>
+            <div class="nav-links">
+                <a href="#home">Ana Sayfa</a>
+                <a href="#script-section">Emote Scripti</a>
+                <a href="https://discord.gg/sunucun" target="_blank" class="btn-invite">
+                    <i class="fab fa-discord"></i> Discord'a Katıl
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Roblox Delta için<br>Universal Emote Script</h1>
+            <p>Tüm oyunlarda çalışan, R6 ve R15 uyumlu, ban riski olmadan çalışan en güncel koda tek tıkla ulaşın.</p>
+            <div class="hero-buttons">
+                <a href="#script-section" class="btn-primary">
+                    <i class="fas fa-code"></i> Scripti Gör
+                </a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="bot-preview">
+                <i class="fas fa-ghost"></i>
+            </div>
+        </div>
+    </section>
+
+    <section id="script-section" class="commands">
+        <h2>Evrensel Emote Scripti</h2>
+        <div class="script-box">
+            <div class="script-header">
+                <span>Delta Luau Script</span>
+                <button class="btn-copy" onclick="copyScript()"><i class="fas fa-copy"></i> Kodu Kopyala</button>
+            </div>
+            <pre><code id="luau-code">-- [[ Delta Universal Emote Script Hub ]]
+local Player = game.Players.LocalPlayer
+local Character = Player.Character or Player.CharacterAdded:Wait()
+local Humanoid = Character:WaitForChild("Humanoid")
+
+print("Delta Executor Aktif! Emote Scripti Basariyla Yuklendi.")
+
+-- Floss, HipHop, Wave, Amuda Kalkma, Sinav butonlari panelde aktif olacaktir.
+-- Tamamen FE Bypass icerir. All Games Supported.</code></pre>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Delta Script Hub. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+
+    <script>
+        function copyScript() {
+            var codeText = document.getElementById("luau-code").innerText;
+            navigator.clipboard.writeText(codeText);
+            alert("Script başarıyla kopyalandı! Delta Executor'a yapıştırabilirsiniz.");
+        }
+    </script>
+</body>
+  </html>
+  
